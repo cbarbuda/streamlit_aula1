@@ -1,12 +1,13 @@
 
 
 import pandas as pd
-#from pandas.core.api import DatetimeTZDtype
 import streamlit as st
-import plotly.express as px
-from datetime import datetime
 
-df=pd.read_excel('C:\Projeto payton_web\lista\lista.xlsx')
+
+
+#df=pd.read_excel('C:\Projeto payton_web\lista\lista.xlsx')
+df=pd.read_excel('lista.xlsx')
+
 placa=list(df['placa'].unique())
 centrocusto=list(df['centrocusto'].unique())
 motorista=list(df['motorista'].unique())
@@ -25,7 +26,7 @@ st.button('Confirmar',
           use_container_width=0)
 
 
-print(motorista)
+
 
 #centrocusto=st.sidebar.selectbox('cento',['TODAS']+centrocusto)
 
